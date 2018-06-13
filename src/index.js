@@ -1,5 +1,13 @@
 import React, { Component } from 'React';
 
+function checkImageDimensions() {
+    if (Number(window.getComputedStyle(img).width.match(/[0-9]+/)) && Number(window.getComputedStyle(img).height.match(/[0-9]+/))) {
+        clearInterval(styleInterval);
+        console.log(window.getComputedStyle(img).width);
+        console.log(window.getComputedStyle(img).height);
+    }
+}
+
 class ReactImageAppear extends Component {
     constructor(props) {
         super(props);
@@ -11,13 +19,7 @@ class ReactImageAppear extends Component {
         const img = this.refs.img;
         console.log('mounted');
 
-        var styleInterval = setInterval(function () {
-            if (Number(window.getComputedStyle(img).width.match(/[0-9]+/)) && Number(window.getComputedStyle(img).height.match(/[0-9]+/))) {
-                clearInterval(styleInterval);
-                console.log(window.getComputedStyle(img).width);
-                console.log(window.getComputedStyle(img).height);
-            }
-        }, 10);
+        window.requestAnimationFrame(checkImageDimensions.bind(null, img));
     }
 
     onLoad() {
