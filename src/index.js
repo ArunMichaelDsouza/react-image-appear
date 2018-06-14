@@ -1,26 +1,36 @@
-import React, { Component } from 'React';
+import React from 'React';
 
-function checkImageDimensions() {
-    if (Number(window.getComputedStyle(img).width.match(/[0-9]+/)) && Number(window.getComputedStyle(img).height.match(/[0-9]+/))) {
-        clearInterval(styleInterval);
-        console.log(window.getComputedStyle(img).width);
-        console.log(window.getComputedStyle(img).height);
-    }
-}
+const parseComputedDimensions = el => {
+    return {
+        width: Number(window.getComputedStyle(el).width.match(/\d+/)),
+        height: Number(window.getComputedStyle(el).height.match(/\d+/))
+    };
+};
 
-class ReactImageAppear extends Component {
+class ReactImageAppear extends React.Component {
     constructor(props) {
         super(props);
 
+        this.getImageDimensions = this.getImageDimensions.bind(this);
         this.onLoad = this.onLoad.bind(this);
     }
 
     componentDidMount() {
-        const img = this.refs.img;
-        console.log('mounted');
+        const { img: imgEl } = this.refs;
 
-        window.requestAnimationFrame(checkImageDimensions.bind(null, img));
-        checkImageDimensions(img);
+        this.getImageDimensions(imgEl);
+    }
+
+    getImageDimensions(imgEl) {
+        const dimensionsInterval = setInterval(() => {
+            const { width, height } = parseComputedDimensions(imgEl);
+
+            if (width && height) {
+                clearInterval(dimensionsInterval);
+                console.log('interval cleared');
+                console.log(width, height);
+            }
+        }, 10);
     }
 
     onLoad() {
