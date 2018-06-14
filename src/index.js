@@ -4,10 +4,7 @@ class ReactImageAppear extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            img: null
-        };
-
+        this.state = { el: null };
         this.imageLoaded = this.imageLoaded.bind(this);
         this.getImageDimensions = this.getImageDimensions.bind(this);
         this.parseComputedDimensions = this.parseComputedDimensions.bind(this);
@@ -16,7 +13,17 @@ class ReactImageAppear extends React.Component {
     componentDidMount() {
         const { src } = this.props;
 
-        this.setState({ img: React.createElement('img', { src, onLoad: this.imageLoaded }) });
+        let ref;
+        this.setState({
+            el: React.createElement('img', {
+                src, onLoad: this.imageLoaded, ref: (inst) => {
+                    ref = inst;
+                }
+            })
+        }, () => {
+            console.log(ref);
+            this.getImageDimensions(ref);
+        });
     }
 
     imageLoaded() {
@@ -32,7 +39,6 @@ class ReactImageAppear extends React.Component {
                 clearInterval(dimensionsInterval);
                 console.log('interval cleared');
                 console.log(width, height);
-                this.setState({ container: createContainer(imgEl, width, height) });
             }
         }, 10);
     }
@@ -45,9 +51,9 @@ class ReactImageAppear extends React.Component {
     }
 
     render() {
-        const { img } = this.state;
+        const { el } = this.state;
 
-        return img;
+        return el;
     }
 }
 
