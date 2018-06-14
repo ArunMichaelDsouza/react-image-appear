@@ -20,6 +20,7 @@ class ReactImageAppear extends Component {
         console.log('mounted');
 
         window.requestAnimationFrame(checkImageDimensions.bind(null, img));
+        checkImageDimensions(img);
     }
 
     onLoad() {
