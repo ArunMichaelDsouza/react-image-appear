@@ -51,12 +51,4 @@ class ReactImageAppear extends React.Component {
     }
 }
 
-class Greeting extends React.Component {
-    render() {
-        return (
-            <ReactImageAppear src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg" />
-        );
-    }
-}
-
 export default ReactImageAppear;
