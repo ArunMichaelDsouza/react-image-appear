@@ -107,9 +107,11 @@ class ReactImageAppear extends Component {
 
         switch (typeof (placeholder)) {
             case 'boolean':
-                placeholderStyling = Object.assign({}, placeholderStyling, {
-                    backgroundImage: `url(${PLACEHOLDER})`
-                })
+                if (placeholder) {
+                    placeholderStyling = Object.assign({}, placeholderStyling, {
+                        backgroundImage: `url(${PLACEHOLDER})`
+                    })
+                }
                 break;
             case 'string':
                 placeholderStyling = Object.assign({}, placeholderStyling, {
