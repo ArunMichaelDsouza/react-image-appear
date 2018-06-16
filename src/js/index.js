@@ -152,29 +152,29 @@ ReactImageAppear.propTypes = {
     loader: PropTypes.string,
     loaderStyle: PropTypes.object,
     loaderClass: PropTypes.string,
-    animation: PropTypes.string,
-    animationDuration: PropTypes.number,
-    easing: PropTypes.string,
-    showLoader: PropTypes.bool,
     placeholder: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string
     ]),
     placeholderStyle: PropTypes.object,
-    placeholderClass: PropTypes.string
+    placeholderClass: PropTypes.string,
+    animation: PropTypes.string,
+    animationDuration: PropTypes.number,
+    easing: PropTypes.string,
+    showLoader: PropTypes.bool
 };
 
 ReactImageAppear.defaultProps = {
     loader: LOADER,
     loaderStyle: {},
     loaderClass: '',
+    placeholder: false,
+    placeholderStyle: {},
+    placeholderClass: '',
     animation: ANIMATION,
     animationDuration: ANIMATION_DURATION,
     easing: EASING,
-    showLoader: true,
-    placeholder: false,
-    placeholderStyle: {},
-    placeholderClass: ''
+    showLoader: true
 }
 
 export default ReactImageAppear;
