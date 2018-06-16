@@ -122,9 +122,12 @@ class ReactImageAppear extends Component {
     }
 
     createLoader() {
-        const { showLoader } = this.props;
+        const { loader, showLoader } = this.props;
 
-        return showLoader ? React.createElement('img', { src: LOADER, style: LOADER_STYLES }) : null;
+        return showLoader ? React.createElement('img', {
+            src: loader ? loader : LOADER,
+            style: LOADER_STYLES
+        }) : null;
     }
 
     render() {
@@ -141,11 +144,11 @@ ReactImageAppear.propTypes = {
     animationDuration: PropTypes.number,
     easing: PropTypes.string,
     showLoader: PropTypes.bool,
-    placeholderStyles: PropTypes.object,
     placeholder: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.string
-    ])
+    ]),
+    placeholderStyles: PropTypes.object
 };
 
 ReactImageAppear.defaultProps = {
@@ -154,8 +157,8 @@ ReactImageAppear.defaultProps = {
     animationDuration: ANIMATION_DURATION,
     easing: EASING,
     showLoader: true,
-    placeholderStyles: {},
-    placeholder: false
+    placeholder: false,
+    placeholderStyles: {}
 }
 
 export default ReactImageAppear;
