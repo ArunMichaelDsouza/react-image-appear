@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/ArunMichaelDsouza/react-image-appear/issues"
   },
-  "homepage": "https://github.com/ArunMichaelDsouza/react-image-appear#readme"
+  "homepage": "https://github.com/ArunMichaelDsouza/react-image-appear#readme",
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  }
 }
