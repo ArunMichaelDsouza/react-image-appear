@@ -7,19 +7,9 @@
 import React, { Component } from 'React';
 import PropTypes from 'prop-types';
 import {
-    LOADER,
-    LOADER_STYLE,
-    PLACEHOLDER,
-    PLACEHOLDER_STYLE,
-    ANIMATION,
-    ANIMATION_DURATION,
-    EASING
+    LOADER, LOADER_STYLE, PLACEHOLDER, PLACEHOLDER_STYLE, ANIMATION, ANIMATION_DURATION, EASING
 } from './constants';
-import {
-    createElement,
-    cloneElement,
-    injectAnimationsScript
-} from './helpers';
+import { injectAnimationsScript } from './helpers';
 
 injectAnimationsScript();
 
@@ -45,7 +35,7 @@ class ReactImageAppear extends Component {
         let imgElement;
         this.setState((prevState, props) => {
             return {
-                imgComponent: createElement('img', {
+                imgComponent: React.createElement('img', {
                     src,
                     onLoad: this.imageOnLoad,
                     style: {
@@ -62,13 +52,12 @@ class ReactImageAppear extends Component {
     }
 
     imageOnLoad() {
-        const { animation, animationDuration, easing } = this.props;
+        const { src, animation, animationDuration, easing } = this.props;
 
-        console.log('loaded');
         this.setState((prevState, props) => {
             return {
-                imgComponent: createElement('img', {
-                    src: this.props.src,
+                imgComponent: React.createElement('img', {
+                    src,
                     style: {
                         animation: `${animation} ${animationDuration} ${easing}`
                     }
@@ -100,10 +89,10 @@ class ReactImageAppear extends Component {
         const { imgComponent } = this.state,
             { placeholderClass } = this.props;
 
-        const placeholder = createElement('div', {
+        const placeholder = React.createElement('div', {
             style: this.getPlaceholderStyle(width, height),
             className: placeholderClass
-        }, cloneElement(imgComponent), this.createLoader());
+        }, React.cloneElement(imgComponent), this.createLoader());
 
         this.setState((prevState, props) => {
             return {
@@ -134,7 +123,7 @@ class ReactImageAppear extends Component {
     createLoader() {
         const { loader, loaderClass, showLoader } = this.props;
 
-        return showLoader ? createElement('img', {
+        return showLoader ? React.createElement('img', {
             src: loader ? loader : LOADER,
             style: this.getLoaderStyle(),
             className: loaderClass
