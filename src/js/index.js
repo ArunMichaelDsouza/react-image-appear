@@ -29,6 +29,7 @@ class ReactImageAppear extends Component {
         this.createPlaceholder = this.createPlaceholder.bind(this);
         this.getPlaceholderStyles = this.getPlaceholderStyles.bind(this);
         this.createLoader = this.createLoader.bind(this);
+        this.getLoaderStyles = this.getLoaderStyles.bind(this);
     }
 
     componentDidMount() {
@@ -126,8 +127,14 @@ class ReactImageAppear extends Component {
 
         return showLoader ? React.createElement('img', {
             src: loader ? loader : LOADER,
-            style: LOADER_STYLES
+            style: this.getLoaderStyles()
         }) : null;
+    }
+
+    getLoaderStyles() {
+        const { loaderStyles } = this.props;
+
+        return Object.assign({}, LOADER_STYLES, loaderStyles);
     }
 
     render() {
@@ -140,6 +147,7 @@ class ReactImageAppear extends Component {
 ReactImageAppear.propTypes = {
     src: PropTypes.string.isRequired,
     loader: PropTypes.string,
+    loaderStyles: PropTypes.object,
     animation: PropTypes.string,
     animationDuration: PropTypes.number,
     easing: PropTypes.string,
@@ -153,6 +161,7 @@ ReactImageAppear.propTypes = {
 
 ReactImageAppear.defaultProps = {
     loader: LOADER,
+    loaderStyles: {},
     animation: ANIMATION,
     animationDuration: ANIMATION_DURATION,
     easing: EASING,
