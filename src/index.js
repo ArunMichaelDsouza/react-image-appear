@@ -15,7 +15,13 @@ import {
     ANIMATION_DURATION,
     EASING
 } from './constants';
-import '../css/animations.css';
+import {
+    createElement,
+    cloneElement,
+    injectAnimationsScript
+} from './helpers';
+
+injectAnimationsScript();
 
 class ReactImageAppear extends Component {
     constructor(props) {
@@ -39,7 +45,7 @@ class ReactImageAppear extends Component {
         let imgElement;
         this.setState((prevState, props) => {
             return {
-                imgComponent: React.createElement('img', {
+                imgComponent: createElement('img', {
                     src,
                     onLoad: this.imageOnLoad,
                     style: {
@@ -61,7 +67,7 @@ class ReactImageAppear extends Component {
         console.log('loaded');
         this.setState((prevState, props) => {
             return {
-                imgComponent: React.createElement('img', {
+                imgComponent: createElement('img', {
                     src: this.props.src,
                     style: {
                         animation: `${animation} ${animationDuration} ${easing}`
@@ -94,10 +100,10 @@ class ReactImageAppear extends Component {
         const { imgComponent } = this.state,
             { placeholderClass } = this.props;
 
-        const placeholder = React.createElement('div', {
+        const placeholder = createElement('div', {
             style: this.getPlaceholderStyle(width, height),
             className: placeholderClass
-        }, React.cloneElement(imgComponent), this.createLoader());
+        }, cloneElement(imgComponent), this.createLoader());
 
         this.setState((prevState, props) => {
             return {
@@ -128,7 +134,7 @@ class ReactImageAppear extends Component {
     createLoader() {
         const { loader, loaderClass, showLoader } = this.props;
 
-        return showLoader ? React.createElement('img', {
+        return showLoader ? createElement('img', {
             src: loader ? loader : LOADER,
             style: this.getLoaderStyle(),
             className: loaderClass
