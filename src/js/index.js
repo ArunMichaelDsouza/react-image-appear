@@ -80,14 +80,15 @@ class ReactImageAppear extends Component {
 
     createPlaceholder(width, height) {
         const { imgComponent } = this.state,
-            { loader, showLoader } = this.props;
+            { loader, showLoader, placeholderStyles } = this.props,
+            placeholderStyling = Object.assign({}, PLACEHOLDER_STYLES, placeholderStyles);
 
         const placeholder = React.createElement('div', {
-            style: Object.assign({}, {
+            style: Object.assign({}, placeholderStyling, {
                 width,
                 height,
                 backgroundImage: showLoader ? `url(${loader})` : null
-            }, PLACEHOLDER_STYLES)
+            })
         }, React.cloneElement(imgComponent));
 
         this.setState((prevState, props) => {
@@ -110,7 +111,8 @@ ReactImageAppear.propTypes = {
     animation: PropTypes.string,
     animationDuration: PropTypes.number,
     easing: PropTypes.string,
-    showLoader: PropTypes.bool
+    showLoader: PropTypes.bool,
+    placeholderStyles: PropTypes.object
 };
 
 ReactImageAppear.defaultProps = {
@@ -118,7 +120,8 @@ ReactImageAppear.defaultProps = {
     animation: ANIMATION,
     animationDuration: ANIMATION_DURATION,
     easing: EASING,
-    showLoader: true
+    showLoader: true,
+    placeholderStyles: {}
 }
 
 export default ReactImageAppear;
