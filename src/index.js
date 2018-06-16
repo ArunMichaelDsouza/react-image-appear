@@ -1,4 +1,4 @@
-import React from 'React';
+//import React from 'React';
 
 class ReactImageAppear extends React.Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class ReactImageAppear extends React.Component {
 
     imageLoaded() {
         console.log('loaded');
-        //this.setState({ el: React.createElement('img', { src: this.props.src }) });
+        this.setState({ el: React.createElement('img', { src: this.props.src }) });
     }
 
     getImageDimensions(img) {
@@ -75,4 +75,4 @@ class ReactImageAppear extends React.Component {
     }
 }
 
-export default ReactImageAppear;
+//export default ReactImageAppear;
