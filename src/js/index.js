@@ -15,6 +15,7 @@ import {
     ANIMATION_DURATION,
     EASING
 } from './constants';
+import '../css/animations.css';
 
 class ReactImageAppear extends Component {
     constructor(props) {
