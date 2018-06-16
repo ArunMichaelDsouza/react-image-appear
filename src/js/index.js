@@ -8,6 +8,7 @@ import React, { Component } from 'React';
 import PropTypes from 'prop-types';
 import {
     LOADER,
+    LOADER_STYLES,
     PLACEHOLDER,
     PLACEHOLDER_STYLES,
     ANIMATION,
@@ -123,7 +124,7 @@ class ReactImageAppear extends Component {
     createLoader() {
         const { showLoader } = this.props;
 
-        return showLoader ? React.createElement('img', { src: LOADER }) : null;
+        return showLoader ? React.createElement('img', { src: LOADER, style: LOADER_STYLES }) : null;
     }
 
     render() {
