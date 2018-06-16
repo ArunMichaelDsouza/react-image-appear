@@ -8,37 +8,36 @@ class ReactImageAppear extends React.Component {
         this.imageLoaded = this.imageLoaded.bind(this);
         this.getImageDimensions = this.getImageDimensions.bind(this);
         this.parseComputedDimensions = this.parseComputedDimensions.bind(this);
+        this.createContainer = this.createContainer.bind(this);
     }
 
     componentDidMount() {
         const { src } = this.props;
 
-        let ref;
+        let img;
         this.setState({
             el: React.createElement('img', {
-                src, onLoad: this.imageLoaded, ref: (inst) => {
-                    ref = inst;
+                src, onLoad: this.imageLoaded, ref: ref => {
+                    img = ref;
                 }
             })
         }, () => {
-            console.log(ref);
-            this.getImageDimensions(ref);
+            this.getImageDimensions(img);
         });
     }
 
     imageLoaded() {
         console.log('loaded');
+        //this.setState({ el: React.createElement('img', { src: this.props.src }) });
     }
 
-    getImageDimensions(imgEl) {
-        const dimensionsInterval = setInterval(() => {
-            const { width, height } = this.parseComputedDimensions(imgEl);
+    getImageDimensions(img) {
+        const that = this, dimensionsInterval = setInterval(() => {
+            const { width, height } = this.parseComputedDimensions(img);
 
-            console.log(width, height);
             if (width && height) {
                 clearInterval(dimensionsInterval);
-                console.log('interval cleared');
-                console.log(width, height);
+                that.createContainer(width, height);
             }
         }, 10);
     }
@@ -48,6 +47,25 @@ class ReactImageAppear extends React.Component {
             width: Number(window.getComputedStyle(el).width.match(/\d+/)),
             height: Number(window.getComputedStyle(el).height.match(/\d+/))
         };
+    }
+
+    createContainer(width, height) {
+        const { el } = this.state;
+
+        const container = React.createElement('div', {
+            style: {
+                width,
+                height,
+                display: 'inline-block',
+                background: '#bbb'
+            }
+        }, React.cloneElement(el, {
+            style: {
+                display: 'none'
+            }
+        }));
+
+        this.setState({ el: container });
     }
 
     render() {
