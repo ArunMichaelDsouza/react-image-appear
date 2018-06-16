@@ -30,7 +30,13 @@ class ReactImageAppear extends React.Component {
 
     imageLoaded() {
         console.log('loaded');
-        this.setState({ imgComponent: React.createElement('img', { src: this.props.src }) });
+        this.setState({
+            imgComponent: React.createElement('img', {
+                src: this.props.src, style: {
+                    animation: 'fadeInUp 2s ease-in-out'
+                }
+            })
+        });
     }
 
     getImageDimensions(imgElement) {
@@ -62,7 +68,7 @@ class ReactImageAppear extends React.Component {
                 backgroundColor: '#f0f0f0',
                 backgroundImage: `url(${defaultLoader})`,
                 backgroundPosition: 'center center',
-                backgroundSize: '40 40',
+                backgroundSize: '40px 40px',
                 backgroundRepeat: 'no-repeat'
             }
         }, React.cloneElement(imgComponent, {
