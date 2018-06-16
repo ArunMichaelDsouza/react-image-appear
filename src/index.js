@@ -1,15 +1,18 @@
 import React from 'React';
+import PropTypes from 'prop-types';
 import { LOADER } from './constants';
 
 class ReactImageAppear extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { imgComponent: null };
-        this.imageLoaded = this.imageLoaded.bind(this);
+        this.state = {
+            imgComponent: null
+        };
+        this.imageOnLoad = this.imageOnLoad.bind(this);
         this.getImageDimensions = this.getImageDimensions.bind(this);
         this.parseComputedDimensions = this.parseComputedDimensions.bind(this);
-        this.createContainer = this.createContainer.bind(this);
+        this.createPlaceholder = this.createPlaceholder.bind(this);
     }
 
     componentDidMount() {
@@ -18,7 +21,7 @@ class ReactImageAppear extends React.Component {
         let imgElement;
         this.setState({
             imgComponent: React.createElement('img', {
-                src, onLoad: this.imageLoaded, ref: ref => {
+                src, onLoad: this.imageOnLoad, ref: ref => {
                     imgElement = ref;
                 }
             })
@@ -27,7 +30,7 @@ class ReactImageAppear extends React.Component {
         });
     }
 
-    imageLoaded() {
+    imageOnLoad() {
         console.log('loaded');
         this.setState({
             imgComponent: React.createElement('img', {
@@ -44,7 +47,7 @@ class ReactImageAppear extends React.Component {
 
             if (width && height) {
                 clearInterval(dimensionsInterval);
-                that.createContainer(width, height);
+                that.createPlaceholder(width, height);
             }
         }, 10);
     }
@@ -56,16 +59,17 @@ class ReactImageAppear extends React.Component {
         };
     }
 
-    createContainer(width, height) {
-        const { imgComponent } = this.state;
+    createPlaceholder(width, height) {
+        const { imgComponent } = this.state,
+            { loader } = this.props;
 
-        const container = React.createElement('div', {
+        const placeholder = React.createElement('div', {
             style: {
                 width,
                 height,
                 display: 'inline-block',
                 backgroundColor: '#f0f0f0',
-                backgroundImage: `url(${LOADER})`,
+                backgroundImage: `url(${loader})`,
                 backgroundPosition: 'center center',
                 backgroundSize: '40px 40px',
                 backgroundRepeat: 'no-repeat'
@@ -76,7 +80,7 @@ class ReactImageAppear extends React.Component {
             }
         }));
 
-        this.setState({ imgComponent: container });
+        this.setState({ imgComponent: placeholder });
     }
 
     render() {
@@ -84,6 +88,15 @@ class ReactImageAppear extends React.Component {
 
         return imgComponent;
     }
+}
+
+ReactImageAppear.propTypes = {
+    src: PropTypes.string.isRequired,
+    loader: PropTypes.string
+};
+
+ReactImageAppear.defaultProps = {
+    loader: LOADER
 }
 
 export default ReactImageAppear;
