@@ -59,9 +59,10 @@ class ReactImageAppear extends React.Component {
                 width,
                 height,
                 display: 'inline-block',
-                backgroundColor: '#bbb',
+                backgroundColor: '#f0f0f0',
                 backgroundImage: `url(${defaultLoader})`,
                 backgroundPosition: 'center center',
+                backgroundSize: '40 40',
                 backgroundRepeat: 'no-repeat'
             }
         }, React.cloneElement(imgComponent, {
