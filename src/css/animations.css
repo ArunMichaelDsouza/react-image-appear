@@ -1,0 +1,288 @@
+/* Animations for react-image-appear */
+
+
+/* Fade in up */
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Fade in down */
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Fade in left */
+@keyframes fadeInLeft {
+    from {
+        transform: translate3d(-20%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Fade in right */
+@keyframes fadeInRight {
+    from {
+        transform: translate3d(20%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Bounce in */
+@keyframes bounceIn {
+    from {
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+/* Bounce in up */
+@keyframes bounceInUp {
+    from {
+        transform: translate3d(0, 20%, 0);
+    }
+    60% {
+        transform: translate3d(0, -25px, 0);
+    }
+    75% {
+        transform: translate3d(0, 10px, 0);
+    }
+    90% {
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Bounce in down */
+@keyframes bounceInDown {
+    from {
+        transform: translate3d(0, -20%, 0);
+    }
+    60% {
+        transform: translate3d(0, 25px, 0);
+    }
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Bounce in left */
+@keyframes bounceInLeft {
+    from {
+        transform: translate3d(-20%, 0, 0);
+    }
+    60% {
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        transform: translate3d(5px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Bounce in right */
+@keyframes bounceInRight {
+    from {
+        transform: translate3d(20%, 0, 0);
+    }
+    60% {
+        transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+        transform: translate3d(10px, 0, 0);
+    }
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Flip in x */
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    }
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
+
+
+/* Flip in y */
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    }
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
+
+
+/* Zoom in */
+@keyframes zoomIn {
+    from {
+        transform: scale3d(.3, .3, .3);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+/* Blur in */
+@keyframes blurIn {
+    from {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+    }
+    to {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+}
+
+
+/* Blur in up */
+@keyframes blurInUp {
+    from {
+        -webkit-filter: blur(15px);
+        filter: blur(15px);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        transform: none;
+    }
+}
+
+
+/* Blur in left */
+@keyframes blurInLeft {
+    from {
+        -webkit-filter: blur(15px);
+        filter: blur(15px);
+        transform: translate3d(-20%, 0, 0);
+    }
+    to {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        transform: none;
+    }
+}
+
+
+/* Blur in right */
+@keyframes blurInRight {
+    from {
+        -webkit-filter: blur(15px);
+        filter: blur(15px);
+        transform: translate3d(20%, 0, 0);
+    }
+    to {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        transform: none;
+    }
+}
+
+
+/* Blur in down */
+@keyframes blurInDown {
+    from {
+        -webkit-filter: blur(15px);
+        filter: blur(15px);
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        transform: none;
+    }
+}
+
+/* Fill in */
+@keyframes fillIn {
+    from {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    to {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);  
+    }
+}

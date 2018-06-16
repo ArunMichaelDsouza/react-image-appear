@@ -4,11 +4,11 @@
     Licence: MIT
 */
 
-import React from 'React';
+import React, { Component } from 'React';
 import PropTypes from 'prop-types';
 import { LOADER, PLACEHOLDER_STYLES } from './constants';
 
-class ReactImageAppear extends React.Component {
+class ReactImageAppear extends Component {
     constructor(props) {
         super(props);
 
@@ -30,6 +30,9 @@ class ReactImageAppear extends React.Component {
                 imgComponent: React.createElement('img', {
                     src,
                     onLoad: this.imageOnLoad,
+                    style: {
+                        opacity: 0
+                    },
                     ref: ref => {
                         imgElement = ref;
                     }
@@ -41,13 +44,15 @@ class ReactImageAppear extends React.Component {
     }
 
     imageOnLoad() {
+        const { animation, animationDuration, easing } = this.props;
+
         console.log('loaded');
         this.setState((prevState, props) => {
             return {
                 imgComponent: React.createElement('img', {
                     src: this.props.src,
                     style: {
-                        animation: 'fadeInUp 2s ease-in-out'
+                        animation: `${animation} ${animationDuration} ${easing}`
                     }
                 })
             };
@@ -83,11 +88,7 @@ class ReactImageAppear extends React.Component {
                 height,
                 backgroundImage: `url(${loader})`
             }, PLACEHOLDER_STYLES)
-        }, React.cloneElement(imgComponent, {
-            style: {
-                display: 'none'
-            }
-        }));
+        }, React.cloneElement(imgComponent));
 
         this.setState((prevState, props) => {
             return {
@@ -105,11 +106,17 @@ class ReactImageAppear extends React.Component {
 
 ReactImageAppear.propTypes = {
     src: PropTypes.string.isRequired,
-    loader: PropTypes.string
+    loader: PropTypes.string,
+    animation: PropTypes.string,
+    animationDuration: PropTypes.number,
+    easing: PropTypes.string
 };
 
 ReactImageAppear.defaultProps = {
-    loader: LOADER
+    loader: LOADER,
+    animation: 'fadeIn',
+    animationDuration: '700ms',
+    easing: 'ease-in-out'
 }
 
 export default ReactImageAppear;
