@@ -4,7 +4,7 @@ class ReactImageAppear extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { el: null };
+        this.state = { imgComponent: null };
         this.imageLoaded = this.imageLoaded.bind(this);
         this.getImageDimensions = this.getImageDimensions.bind(this);
         this.parseComputedDimensions = this.parseComputedDimensions.bind(this);
@@ -14,26 +14,26 @@ class ReactImageAppear extends React.Component {
     componentDidMount() {
         const { src } = this.props;
 
-        let img;
+        let imgElement;
         this.setState({
-            el: React.createElement('img', {
+            imgComponent: React.createElement('img', {
                 src, onLoad: this.imageLoaded, ref: ref => {
-                    img = ref;
+                    imgElement = ref;
                 }
             })
         }, () => {
-            this.getImageDimensions(img);
+            this.getImageDimensions(imgElement);
         });
     }
 
     imageLoaded() {
         console.log('loaded');
-        this.setState({ el: React.createElement('img', { src: this.props.src }) });
+        this.setState({ imgComponent: React.createElement('img', { src: this.props.src }) });
     }
 
-    getImageDimensions(img) {
+    getImageDimensions(imgElement) {
         const that = this, dimensionsInterval = setInterval(() => {
-            const { width, height } = this.parseComputedDimensions(img);
+            const { width, height } = this.parseComputedDimensions(imgElement);
 
             if (width && height) {
                 clearInterval(dimensionsInterval);
@@ -50,7 +50,7 @@ class ReactImageAppear extends React.Component {
     }
 
     createContainer(width, height) {
-        const { el } = this.state;
+        const { imgComponent } = this.state;
 
         const container = React.createElement('div', {
             style: {
@@ -59,19 +59,19 @@ class ReactImageAppear extends React.Component {
                 display: 'inline-block',
                 background: '#bbb'
             }
-        }, React.cloneElement(el, {
+        }, React.cloneElement(imgComponent, {
             style: {
                 display: 'none'
             }
         }));
 
-        this.setState({ el: container });
+        this.setState({ imgComponent: container });
     }
 
     render() {
-        const { el } = this.state;
+        const { imgComponent } = this.state;
 
-        return el;
+        return imgComponent;
     }
 }
 
