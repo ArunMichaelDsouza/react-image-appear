@@ -7,6 +7,10 @@ const LOADER = 'data:image/gif;base64,R0lGODlhMgAyAPMAAP////f39+/v7+bm5t7e3tbW1s
         backgroundPosition: 'center center',
         backgroundSize: '40px 40px',
         backgroundRepeat: 'no-repeat'
-    };
+    },
+    ANIMATION = 'fadeIn',
+    ANIMATION_DURATION = '700ms',
+    EASING = 'ease-in-out';
 
-export { LOADER, PLACEHOLDER_STYLES };
+
+export { LOADER, PLACEHOLDER_STYLES, ANIMATION, ANIMATION_DURATION, EASING };

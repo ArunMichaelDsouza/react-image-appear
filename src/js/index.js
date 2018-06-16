@@ -6,7 +6,7 @@
 
 import React, { Component } from 'React';
 import PropTypes from 'prop-types';
-import { LOADER, PLACEHOLDER_STYLES } from './constants';
+import { LOADER, PLACEHOLDER_STYLES, ANIMATION, ANIMATION_DURATION, EASING } from './constants';
 
 class ReactImageAppear extends Component {
     constructor(props) {
@@ -114,9 +114,9 @@ ReactImageAppear.propTypes = {
 
 ReactImageAppear.defaultProps = {
     loader: LOADER,
-    animation: 'fadeIn',
-    animationDuration: '700ms',
-    easing: 'ease-in-out'
+    animation: ANIMATION,
+    animationDuration: ANIMATION_DURATION,
+    easing: EASING
 }
 
 export default ReactImageAppear;
