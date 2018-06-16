@@ -1,6 +1,13 @@
+/*
+    react-image-appear v1.0.0
+    Copyright (c) 2018 Arun Michael Dsouza (amdsouza92@gmail.com)
+    Licence: MIT
+*/
+
 import React from 'React';
 import PropTypes from 'prop-types';
 import { LOADER } from './constants';
+import { createElement } from './helpers';
 
 class ReactImageAppear extends React.Component {
     constructor(props) {
@@ -19,12 +26,16 @@ class ReactImageAppear extends React.Component {
         const { src } = this.props;
 
         let imgElement;
-        this.setState({
-            imgComponent: React.createElement('img', {
-                src, onLoad: this.imageOnLoad, ref: ref => {
-                    imgElement = ref;
-                }
-            })
+        this.setState((prevState, props) => {
+            return {
+                imgComponent: createElement('img', {
+                    src,
+                    onLoad: this.imageOnLoad,
+                    ref: ref => {
+                        imgElement = ref;
+                    }
+                })
+            };
         }, () => {
             this.getImageDimensions(imgElement);
         });
