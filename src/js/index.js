@@ -80,13 +80,13 @@ class ReactImageAppear extends Component {
 
     createPlaceholder(width, height) {
         const { imgComponent } = this.state,
-            { loader } = this.props;
+            { loader, showLoader } = this.props;
 
         const placeholder = React.createElement('div', {
             style: Object.assign({}, {
                 width,
                 height,
-                backgroundImage: `url(${loader})`
+                backgroundImage: showLoader ? `url(${loader})` : null
             }, PLACEHOLDER_STYLES)
         }, React.cloneElement(imgComponent));
 
@@ -109,14 +109,16 @@ ReactImageAppear.propTypes = {
     loader: PropTypes.string,
     animation: PropTypes.string,
     animationDuration: PropTypes.number,
-    easing: PropTypes.string
+    easing: PropTypes.string,
+    showLoader: PropTypes.bool
 };
 
 ReactImageAppear.defaultProps = {
     loader: LOADER,
     animation: ANIMATION,
     animationDuration: ANIMATION_DURATION,
-    easing: EASING
+    easing: EASING,
+    showLoader: true
 }
 
 export default ReactImageAppear;
