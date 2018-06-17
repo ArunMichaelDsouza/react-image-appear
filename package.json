@@ -2,7 +2,7 @@
   "name": "react-image-appear",
   "version": "1.1.11",
   "description": "ReactJS component to make images appear with transition as they load.",
-  "main": "./src/index.js",
+  "main": "./src/ReactImageAppear.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArunMichaelDsouza/react-image-appear.git"
