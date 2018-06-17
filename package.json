@@ -1,6 +1,6 @@
 {
   "name": "react-image-appear",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "ReactJS component to make images appear with transition as they load.",
   "main": "./src/index.js",
   "repository": {

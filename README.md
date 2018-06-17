@@ -6,6 +6,8 @@ ReactJS component to make images appear with transition as they load.
 
 ![react-image-appear](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/intro.gif)
 
+This project has also been ported to AngularJS 1.x - [ng-image-appear](https://github.com/ArunMichaelDsouza/ng-image-appear).
+
 <br/>
 
 ## Installation
