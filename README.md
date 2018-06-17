@@ -1,4 +1,4 @@
-<img src="https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/icon.png" width="300" height="auto" alt="react-image-appear icon"/>
+<img src="https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/icon.png" width="250" height="auto" alt="react-image-appear icon"/>
 
 # react-image-appear [![npm version](https://badge.fury.io/js/react-image-appear.svg)](https://badge.fury.io/js/react-image-appear) [![NPM Downloads](https://img.shields.io/npm/dm/react-image-appear.svg?style=flat-square)](https://www.npmjs.com/package/react-image-appear)
 ReactJS component to make images appear with transition as they load.

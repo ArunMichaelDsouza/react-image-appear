@@ -1,5 +1,5 @@
 /*
-    react-image-appear v1.1.9
+    react-image-appear v1.1.10
     Copyright (c) 2018 Arun Michael Dsouza (amdsouza92@gmail.com)
     Licence: MIT
 */
