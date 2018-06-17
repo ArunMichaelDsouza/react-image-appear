@@ -1,5 +1,5 @@
 /*
-    react-image-appear v1.1.4
+    react-image-appear v1.1.6
     Copyright (c) 2018 Arun Michael Dsouza (amdsouza92@gmail.com)
     Licence: MIT
 */
@@ -173,6 +173,6 @@ ReactImageAppear.defaultProps = {
     animationDuration: ANIMATION_DURATION,
     easing: EASING,
     showLoader: true
-}
+};
 
 export default ReactImageAppear;
