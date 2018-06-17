@@ -1,6 +1,6 @@
 {
   "name": "react-image-appear",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "ReactJS component to make images appear with transition as they load.",
   "main": "./src/index.js",
   "repository": {
@@ -18,7 +18,7 @@
     "transition"
   ],
   "peerDependencies": {
-    "react": "* || ^16.4.0"
+    "react": "* || ^16.4.1"
   },
   "author": "Arun Michael Dsouza <amdsouza92@gmail.com>",
   "license": "MIT",
@@ -28,5 +28,8 @@
   "homepage": "https://github.com/ArunMichaelDsouza/react-image-appear#readme",
   "dependencies": {
     "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "react": "^16.4.1"
   }
 }
