@@ -14,6 +14,12 @@ ReactJS component to make images appear with transition as they load.
 npm install react-image-appear --save
 ```
 
+#### via yarn
+
+```html
+yarn add react-image-appear
+```
+
 <br/>
 
 ## Usage
@@ -194,7 +200,7 @@ Specifies the animation duration for the image to appear.
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
-	animationDuration="1s"
+    animationDuration="1s"
 />
 ```
 
@@ -208,7 +214,7 @@ Specifies the timing-function for the CSS3 powered animation.
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
-	easing="ease-in"
+    easing="ease-in"
 />
 ```
 
@@ -221,7 +227,7 @@ Specifies whether to show the loader or not.
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
-	showLoader={false}
+    showLoader={false}
 />
 ```
 
@@ -233,7 +239,7 @@ Specifies whether to show the loader or not.
 
 MIT Licensed
 
-Copyright (c) 2016 Arun Michael Dsouza (amdsouza92@gmail.com)
+Copyright (c) 2018 Arun Michael Dsouza (amdsouza92@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
