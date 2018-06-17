@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/ArunMichaelDsouza/react-image-appear.git"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "keywords": [
     "reactjs",
     "image-load",
@@ -30,6 +33,14 @@
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
-    "react": "^16.4.1"
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
