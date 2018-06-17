@@ -2,7 +2,7 @@
 ReactJS component to make images appear with transition as they load.
 > Wraps an ``img`` within a placeholder element and adds a gif loader in between. No more ugly-looking progressively loading images!
 
-![react-image-appear](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/intro.gif)
+![react-image-appear](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/intro.gif)
 
 <br/>
 
@@ -55,7 +55,7 @@ Adds a custom loader to the component. When not provided, applies a default one.
 />
 ```
 
-![loader](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/loader.gif)
+![loader](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/loader.gif)
 
 <br/>
 
@@ -93,7 +93,7 @@ Adds a placeholder background to the component.
 />
 ```
 
-![placeholder](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/placeholder.gif)
+![placeholder](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/placeholder.gif)
 
 You can override the default placeholder background and add your own by passing an image URL to this prop.
 
@@ -104,7 +104,7 @@ You can override the default placeholder background and add your own by passing 
 />
 ```
 
-![placeholder-custom](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/placeholder-custom.gif)
+![placeholder-custom](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/placeholder-custom.gif)
 
 <br/>
 
@@ -142,7 +142,7 @@ Add a CSS3 powered animation to the image as it appears.
 />
 ```
 
-![animation](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/animation.gif)
+![animation](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/animation.gif)
 
 react-image-appear has the following built-in CSS3 animations - 
 
@@ -225,7 +225,7 @@ Specifies whether to show the loader or not.
 />
 ```
 
-![show-loader](https://raw.githubusercontent.com/ArunMichaelDsouza/react-image-appear/master/demo/images/show-loader.gif)
+![show-loader](https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/demo/images/show-loader.gif)
 
 <br/>
 
