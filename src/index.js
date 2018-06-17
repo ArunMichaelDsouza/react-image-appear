@@ -1,10 +1,10 @@
 /*
-    react-image-appear v1.1.10
+    react-image-appear v1.1.11
     Copyright (c) 2018 Arun Michael Dsouza (amdsouza92@gmail.com)
     Licence: MIT
 */
 
-import React, { Component } from 'React';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
     LOADER, LOADER_STYLE, PLACEHOLDER, PLACEHOLDER_STYLE, ANIMATION, ANIMATION_DURATION, EASING
