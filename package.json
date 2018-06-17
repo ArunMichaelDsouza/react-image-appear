@@ -9,6 +9,9 @@
   },
   "keywords": [
     "reactjs",
+    "image-load",
+    "image-transition",
+    "smooth-loading",
     "module",
     "image",
     "appear",
