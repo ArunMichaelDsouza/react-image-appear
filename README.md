@@ -240,6 +240,22 @@ Specifies whether to show the loader or not.
 
 <br/>
 
+## Testing
+
+ReactImageAppear uses the [jest](https://facebook.github.io/jest/) test runner along with [enzyme](http://airbnb.io/enzyme/) for easier assertion and manipulation. Run the following command to start the jest test runner - 
+
+```html
+npm test
+```
+
+<br/>
+
+## Contributing
+
+Pull requests and suggestions are more than welcomed. In case of any issue, please report [here](https://github.com/ArunMichaelDsouza/react-image-appear/issues).
+
+<br/>
+
 ## License
 
 MIT Licensed
