@@ -157,7 +157,7 @@ ReactImageAppear.propTypes = {
     placeholderStyle: PropTypes.object,
     placeholderClass: PropTypes.string,
     animation: PropTypes.string,
-    animationDuration: PropTypes.number,
+    animationDuration: PropTypes.string,
     easing: PropTypes.string,
     showLoader: PropTypes.bool
 };
