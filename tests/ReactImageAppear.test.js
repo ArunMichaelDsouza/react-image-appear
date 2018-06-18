@@ -108,4 +108,11 @@ describe('ReactImageAppear Component', () => {
         expect(el.props().showLoader).toEqual(showLoader);
         expect(typeof el.props().showLoader).toEqual('boolean');
     });
+
+    it('Check for rendered element to be an "img" with the expected src', () => {
+        const el = mount(<ReactImageAppear src={src} />);
+
+        expect(el.children().at(0).type()).toEqual('img');
+        expect(el.find('img').prop('src')).toEqual(src);
+    });
 });
