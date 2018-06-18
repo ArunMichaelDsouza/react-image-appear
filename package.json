@@ -41,6 +41,7 @@
     "jest": "^23.1.0",
     "jest-enzyme": "^6.0.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-test-renderer": "^16.4.1"
   }
 }

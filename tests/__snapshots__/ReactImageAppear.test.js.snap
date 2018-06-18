@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReactImageAppear Component Snapshot test 1`] = `
+<img
+  onLoad={[Function]}
+  src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+/>
+`;

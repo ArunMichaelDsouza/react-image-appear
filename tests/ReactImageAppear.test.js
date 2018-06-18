@@ -4,10 +4,18 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import ReactImageAppear from '../src/ReactImageAppear';
 import { LOADER } from '../src/constants';
+import renderer from 'react-test-renderer';
 
 const src = 'https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg';
 
 describe('ReactImageAppear Component', () => {
+    it('Snapshot test', () => {
+        const tree = renderer
+            .create(<ReactImageAppear src={src} />)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
     it('Check for "src" prop to be present and to have a string value', () => {
         const el = shallow(<ReactImageAppear src={src} />);
 
