@@ -15,13 +15,13 @@ This project has also been ported to AngularJS 1.x - [ng-image-appear](https://g
 
 #### via npm
 
-```html
+```bash
 npm install react-image-appear --save
 ```
 
 #### via yarn
 
-```html
+```bash
 yarn add react-image-appear
 ```
 
@@ -31,7 +31,7 @@ yarn add react-image-appear
 
 Import the component and provide the ``src`` with any of the available [props](#props).
 
-```javascript
+```jsx
 import ReactImageAppear from 'react-image-appear';
 
 <ReactImageAppear 
@@ -48,7 +48,7 @@ import ReactImageAppear from 'react-image-appear';
 #### ``src {string} | required``
 The image source.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
 />
@@ -59,7 +59,7 @@ The image source.
 #### ``loader {string}``
 Adds a custom loader to the component. When not provided, applies a default one.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
@@ -73,7 +73,7 @@ Adds a custom loader to the component. When not provided, applies a default one.
 #### ``loaderStyle {object}``
 Adds custom styling to the loader.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     loaderStyle={{ border: "2px solid red" }}
@@ -85,7 +85,7 @@ Adds custom styling to the loader.
 #### ``loaderClass {string}``
 Adds CSS classes to the loader.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     loaderClass="my-loader"
@@ -97,7 +97,7 @@ Adds CSS classes to the loader.
 #### ``placeholder {boolean | string}``
 Adds a placeholder background to the component.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     placeholder
@@ -108,7 +108,7 @@ Adds a placeholder background to the component.
 
 You can override the default placeholder background and add your own by passing an image URL to this prop.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     placeholder="http://getuikit.com/docs/images/placeholder_600x400.svg"
@@ -122,7 +122,7 @@ You can override the default placeholder background and add your own by passing 
 #### ``placeholderStyle {object}``
 Adds custom styling to the placeholder.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     placeholderStyle={{ border: "2px solid red", backgroundColor: 'black' }}
@@ -134,7 +134,7 @@ Adds custom styling to the placeholder.
 #### ``placeholderClass {string}``
 Adds CSS classes to the placeholder.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     loaderClass="my-placeholder"
@@ -146,7 +146,7 @@ Adds CSS classes to the placeholder.
 #### ``animation {string} | Default: fadeIn``
 Add a CSS3 powered animation to the image as it appears.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
@@ -201,7 +201,7 @@ react-image-appear has the following built-in CSS3 animations -
 
 Specifies the animation duration for the image to appear.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
@@ -215,7 +215,7 @@ Specifies the animation duration for the image to appear.
 
 Specifies the timing-function for the CSS3 powered animation.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
@@ -228,7 +228,7 @@ Specifies the timing-function for the CSS3 powered animation.
 #### ``showLoader {boolean} | Default: true``
 Specifies whether to show the loader or not.
 
-```html
+```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
     animation="bounceIn"
@@ -244,7 +244,7 @@ Specifies whether to show the loader or not.
 
 ReactImageAppear uses the [jest](https://facebook.github.io/jest/) test runner along with [enzyme](http://airbnb.io/enzyme/) for easier assertion and manipulation. Run the following command to start the jest test runner - 
 
-```html
+```bash
 npm test
 ```
 
