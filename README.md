@@ -250,9 +250,10 @@ npm test
 
 <br/>
 
-## Contributing
+## Contributors
 
-Pull requests and suggestions are more than welcomed. In case of any issue, please report [here](https://github.com/ArunMichaelDsouza/react-image-appear/issues).
+| [<img src="https://avatars3.githubusercontent.com/u/4924614" width="100px;"/><br /><sub><b>Arun Michael Dsouza</b></sub>](https://github.com/ArunMichaelDsouza)<br />| [<img src="https://avatars2.githubusercontent.com/u/2981250" width="100px;"/><br /><sub><b>Stefan</b></sub>](https://github.com/stnwk)<br />|
+| :---: | :---: |
 
 <br/>
 
