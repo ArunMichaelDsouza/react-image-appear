@@ -232,7 +232,6 @@ Specifies whether to show the loader or not.
 ```jsx
 <ReactImageAppear 
     src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
-    animation="bounceIn"
     showLoader={false}
 />
 ```
