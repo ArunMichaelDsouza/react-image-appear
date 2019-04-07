@@ -1,6 +1,7 @@
 <img src="https://github.com/ArunMichaelDsouza/react-image-appear/raw/master/icon.png" width="250" height="auto" alt="react-image-appear icon"/>
 
-# react-image-appear [![npm version](https://badge.fury.io/js/react-image-appear.svg)](https://badge.fury.io/js/react-image-appear) [![NPM Downloads](https://img.shields.io/npm/dm/react-image-appear.svg?style=flat-square)](https://www.npmjs.com/package/react-image-appear) [![Build Status](https://travis-ci.org/ArunMichaelDsouza/react-image-appear.svg?branch=master)](https://travis-ci.org/ArunMichaelDsouza/react-image-appear)
+# react-image-appear [![npm version](https://badge.fury.io/js/react-image-appear.svg)](https://badge.fury.io/js/react-image-appear) [![NPM Downloads](https://img.shields.io/npm/dm/react-image-appear.svg?style=flat-square)](https://www.npmjs.com/package/react-image-appear) [![Build Status](https://travis-ci.org/ArunMichaelDsouza/react-image-appear.svg?branch=master)](https://travis-ci.org/ArunMichaelDsouza/react-image-appear) <span class="badge-patreon"><a href="https://www.patreon.com/arunmichaeldsouza" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-blue.svg" alt="Patreon donate button" /></a></span>
+
 
 ReactJS component to make images appear with transition as they load.
 > Wraps an ``img`` within a placeholder element and adds a gif loader in between. No more ugly-looking progressively loading images!
@@ -254,6 +255,14 @@ npm test
 
 | [<img src="https://avatars3.githubusercontent.com/u/4924614" width="100px;"/><br /><sub><b>Arun Michael Dsouza</b></sub>](https://github.com/ArunMichaelDsouza)<br />| [<img src="https://avatars2.githubusercontent.com/u/2981250" width="100px;"/><br /><sub><b>Stefan</b></sub>](https://github.com/stnwk)<br />|
 | :---: | :---: |
+
+<br/>
+
+## Support
+
+If you'd like to help support the development of the project, please consider backing me on Patreon -
+
+[<img src="https://arunmichaeldsouza.com/img/patreon.png" width="180px;"/>](https://www.patreon.com/bePatron?u=8841116)
 
 <br/>
 
