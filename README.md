@@ -57,6 +57,18 @@ The image source.
 
 <br/>
 
+#### ``className {string}``
+Classes to be applied to the image.
+
+```jsx
+<ReactImageAppear 
+    src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
+    className="my-image"
+/>
+```
+
+<br/>
+
 #### ``loader {string}``
 Adds a custom loader to the component. When not provided, applies a default one.
 
