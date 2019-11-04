@@ -7,6 +7,7 @@ import { LOADER } from '../src/constants';
 import renderer from 'react-test-renderer';
 
 const src = 'https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg';
+const className = 'my-class';
 
 describe('ReactImageAppear Component', () => {
     it('Snapshot test', () => {
@@ -21,6 +22,13 @@ describe('ReactImageAppear Component', () => {
 
         expect(el.props().src).toEqual(src);
         expect(typeof el.props().src).toEqual('string');
+    });
+
+    it('Check for "className" prop to be present and to have a string value', () => {
+        const el = shallow(<ReactImageAppear src={src} className={className} />);
+
+        expect(el.props().className).toEqual(className);
+        expect(typeof el.props().className).toEqual('string');
     });
 
     it('Check for "loader" prop to have a string value', () => {

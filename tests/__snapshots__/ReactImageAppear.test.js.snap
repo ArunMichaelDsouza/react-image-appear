@@ -2,6 +2,7 @@
 
 exports[`ReactImageAppear Component Snapshot test 1`] = `
 <img
+  className=""
   onLoad={[Function]}
   src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
   style={
