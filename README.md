@@ -252,6 +252,18 @@ Specifies whether to show the loader or not.
 
 <br/>
 
+#### ``onClick {function}``
+Callback to be called when the image is clicked.
+
+```jsx
+<ReactImageAppear 
+    src="https://newevolutiondesigns.com/images/freebies/tropical-beach-background-8.jpg"
+    onClick={handleImageClick}
+/>
+```
+
+<br/>
+
 ## Testing
 
 ReactImageAppear uses the [jest](https://facebook.github.io/jest/) test runner along with [enzyme](http://airbnb.io/enzyme/) for easier assertion and manipulation. Run the following command to start the jest test runner - 
