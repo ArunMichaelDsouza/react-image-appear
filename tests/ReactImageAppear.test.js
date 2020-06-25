@@ -131,4 +131,14 @@ describe('ReactImageAppear Component', () => {
         expect(el.children().at(0).type()).toEqual('img');
         expect(el.find('img').prop('src')).toEqual(src);
     });
+
+    it('Check for show and hide loading spinner', () => {
+        const wrapper = shallow(<ReactImageAppear src={src} showLoader={true}/>);
+        const componentInstance = wrapper.instance();
+        componentInstance.componentDidMount();
+        expect(wrapper.state('loading')).toBe(true);
+
+        componentInstance.imageOnLoad();
+        expect(wrapper.state('loading')).toBe(false);
+    })
 });
