@@ -18,7 +18,8 @@ class ReactImageAppear extends Component {
         super(props);
 
         this.state = {
-            imgComponent: null
+            imgComponent: null,
+            loading: false
         };
         this.imageOnLoad = this.imageOnLoad.bind(this);
         this.getImageDimensions = this.getImageDimensions.bind(this);
@@ -35,6 +36,7 @@ class ReactImageAppear extends Component {
         let imgElement;
         this.setState((prevState, props) => {
             return {
+                loading: true,
                 imgComponent: React.createElement('img', {
                     src,
                     onLoad: this.imageOnLoad,
@@ -57,6 +59,7 @@ class ReactImageAppear extends Component {
 
         this.setState((prevState, props) => {
             return {
+                loading: false,
                 imgComponent: React.createElement('img', {
                     src,
                     style: {
@@ -127,8 +130,8 @@ class ReactImageAppear extends Component {
 
     createLoader() {
         const { loader, loaderClass, showLoader } = this.props;
-
-        return showLoader ? React.createElement('img', {
+        const { loading } = this.state
+        return (showLoader && loading ) ? React.createElement('img', {
             src: loader ? loader : LOADER,
             style: this.getLoaderStyle(),
             className: loaderClass
