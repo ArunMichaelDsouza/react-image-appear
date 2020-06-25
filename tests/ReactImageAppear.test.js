@@ -141,4 +141,12 @@ describe('ReactImageAppear Component', () => {
         componentInstance.imageOnLoad();
         expect(wrapper.state('loading')).toBe(false);
     })
+    
+    it('Check for "onClick" prop to have a function value', () => {
+        const onClick = () => {},
+            el = mount(<ReactImageAppear src={src} onClick={onClick} />);
+
+        expect(el.props().onClick).toEqual(onClick);
+        expect(typeof el.props().onClick).toEqual('function');
+    });
 });
