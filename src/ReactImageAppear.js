@@ -86,8 +86,8 @@ class ReactImageAppear extends Component {
 
     parseComputedDimensions(el) {
         return {
-            width: Number(window.getComputedStyle(el).width.match(/\d+/)),
-            height: Number(window.getComputedStyle(el).height.match(/\d+/))
+            width: Number(window.getComputedStyle(el).width.match(/\d+\.?\d+/g).join('')),
+            height: Number(window.getComputedStyle(el).height.match(/\d+\.?\d+/g).join(''))
         };
     }
 
