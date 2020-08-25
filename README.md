@@ -276,8 +276,8 @@ npm test
 
 ## Contributors
 
-| [<img src="https://avatars3.githubusercontent.com/u/4924614" width="100px;"/><br /><sub><b>Arun Michael Dsouza</b></sub>](https://github.com/ArunMichaelDsouza)<br />| [<img src="https://avatars1.githubusercontent.com/u/8732349" width="100px;"/><br /><sub><b>Patrick</b></sub>](https://github.com/pcw0002)<br />| [<img src="https://avatars2.githubusercontent.com/u/2981250" width="100px;"/><br /><sub><b>Stefan</b></sub>](https://github.com/stnwk)<br />|
-| :---: | :---: | :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/4924614" width="100px;"/><br /><sub><b>Arun Michael Dsouza</b></sub>](https://github.com/ArunMichaelDsouza)<br />| [<img src="https://avatars1.githubusercontent.com/u/8732349" width="100px;"/><br /><sub><b>Patrick</b></sub>](https://github.com/pcw0002)<br />| [<img src="https://avatars2.githubusercontent.com/u/2981250" width="100px;"/><br /><sub><b>Stefan</b></sub>](https://github.com/stnwk)<br />| [<img src="https://avatars3.githubusercontent.com/u/3776302?s=400&v=4" width="100px;"/><br /><sub><b>Tim Carr</b></sub>](https://github.com/xaphod)<br />|
+| :---: | :---: | :---: | :---: |
 
 <br/>
 
