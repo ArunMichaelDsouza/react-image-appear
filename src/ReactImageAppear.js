@@ -85,9 +85,11 @@ class ReactImageAppear extends Component {
     }
 
     parseComputedDimensions(el) {
+        const widthMatch = window.getComputedStyle(el).width.match(/\d+\.?\d+/g);
+        const heightMatch = window.getComputedStyle(el).height.match(/\d+\.?\d+/g);
         return {
-            width: Number(window.getComputedStyle(el).width.match(/\d+/)),
-            height: Number(window.getComputedStyle(el).height.match(/\d+/))
+            width: widthMatch ? Number(widthMatch.join('')) : undefined,
+            height: heightMatch ? Number(heightMatch.join('')) : undefined,
         };
     }
 
